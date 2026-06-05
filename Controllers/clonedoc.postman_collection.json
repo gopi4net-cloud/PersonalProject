@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "ffb60663-5d25-4db6-8fb9-2ce19ffe9f05",
+		"name": "clonedoc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Doc clone to new clas",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "{{s}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{ci}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{url}}",
+							"type": "string"
+						},
+						{
+							"key": "challengeAlgorithm",
+							"value": "S256",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "metadata",
+							"value": "{\"u_cse_id\": \"AT-3136531-M\" , \"u_title\": \"AT-3136531-M EOB\",\"u_doc_titl\":\"AT-3136531-M EOB\",\"u_doc_type\":\"CORRESPONDENCE-INCOMING\",\"u_doc_src_id\":\"ddeuniqueid\",\"u_security_group\":\"AG\",\"u_author\":\"sb1014\",\"u_mbr_id\":\"3434444\",\"u_doc_sub_typ\":\"MEDICAL RECORDS\"}",
+							"type": "default"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/sb1014/OneDrive - UHG/MB/doc360test files to upload/RRTTestDoc.pdf",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://gateway-stage-core.optum.com/api/int/ecs/doc360/documents/v2?document-type=u_clinical_docs&skip-content=true&source-document-ID=ff075a49-dc78-4f15-b0db-f3c113ee449d%7Cu_prov_attch_2025-04_v1&source-document-type=u_prov_attch",
+					"protocol": "https",
+					"host": [
+						"gateway-stage-core",
+						"optum",
+						"com"
+					],
+					"path": [
+						"api",
+						"int",
+						"ecs",
+						"doc360",
+						"documents",
+						"v2"
+					],
+					"query": [
+						{
+							"key": "document-type",
+							"value": "u_clinical_docs"
+						},
+						{
+							"key": "skip-content",
+							"value": "true"
+						},
+						{
+							"key": "source-document-ID",
+							"value": "ff075a49-dc78-4f15-b0db-f3c113ee449d%7Cu_prov_attch_2025-04_v1"
+						},
+						{
+							"key": "source-document-type",
+							"value": "u_prov_attch"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
